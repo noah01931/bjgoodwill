@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="28abc141-743c-4020-9016-50a47c4994c2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="1e2f84ed-747d-4884-a88b-7e6228739b1a" SourceId="1" SourceUrl="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="bb389300-25e3-40b8-87d0-bceac0222ff4" SourceId="1" SourceUrl="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="7c9ff64f-9e7b-4660-a63a-4d2d4a1581f6" SourceId="1" SourceUrl="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="JHEMR.JHCommonLib.Entity.TableObject.xsd" MetadataType="Schema" ID="baf23df1-204b-4987-bc34-7538400b833b" SourceId="1" SourceUrl="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="JHEMR.JHAutoUpdateServiceLib.xsd" MetadataType="Schema" ID="1daffde1-5ae2-4ad4-ac52-7839f4d758d7" SourceId="1" SourceUrl="net.tcp://192.168.11.125:8980/jhautoupdateservice/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

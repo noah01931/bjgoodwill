@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfJHSYS_FILE_UPLOAD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JHSYS_FILE_UPLOAD" nillable="true" type="tns:JHSYS_FILE_UPLOAD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJHSYS_FILE_UPLOAD" nillable="true" type="tns:ArrayOfJHSYS_FILE_UPLOAD" />
+  <xs:complexType name="JHSYS_FILE_UPLOAD">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JHATable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DISTRIBUTE_NO" type="xs:int" />
+          <xs:element minOccurs="0" name="FILE_BODY" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FILE_LENGTH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FILE_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOSPITAL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IS_CURVERSION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LAST_UPDATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SYS_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UPLOAD_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VERSION_NAME" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JHSYS_FILE_UPLOAD" nillable="true" type="tns:JHSYS_FILE_UPLOAD" />
+  <xs:complexType name="JHATable">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="JHATable" nillable="true" type="tns:JHATable" />
+  <xs:complexType name="ArrayOfJHSYS_DICT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JHSYS_DICT" nillable="true" type="tns:JHSYS_DICT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJHSYS_DICT" nillable="true" type="tns:ArrayOfJHSYS_DICT" />
+  <xs:complexType name="JHSYS_DICT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SysCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SysNote" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JHSYS_DICT" nillable="true" type="tns:JHSYS_DICT" />
+</xs:schema>

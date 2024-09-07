@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ff828f7c-87a6-427f-bfe0-a4eda2115186" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://127.0.0.1:8980/jhautoupdateservice/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="59992eb5-053d-43a6-bb0e-7c58bbcedd0b" SourceId="1" SourceUrl="net.tcp://127.0.0.1:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="1f61efaf-4961-412f-ac44-a79598e70fba" SourceId="1" SourceUrl="net.tcp://127.0.0.1:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="969e0a13-5bf8-4f44-bbe6-87c98214b2db" SourceId="1" SourceUrl="net.tcp://127.0.0.1:8980/jhautoupdateservice/mex" />
+    <MetadataFile FileName="service2.xsd" MetadataType="Schema" ID="0062db6c-6c48-4fa6-a476-7cfd00f46685" SourceId="1" SourceUrl="net.tcp://127.0.0.1:8980/jhautoupdateservice/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

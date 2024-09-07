@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JHAutoUpdateService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IJHAutoUpdateService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="1800000">
+          </wsrm:InactivityTimeout>
+          <wsrm:AcknowledgementInterval Milliseconds="200">
+          </wsrm:AcknowledgementInterval>
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/JHEMR.JHAutoUpdateServiceLib" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJHAutoUpdateService_UploadDLL_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadDLL" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_UploadDLL_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadDLLResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_StopCurrVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopCurrVersion" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_StopCurrVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopCurrVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_StartVision_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartVision" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_StartVision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartVisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllCurrentFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrentFiles" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllCurrentFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCurrentFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllSysDicts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSysDicts" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllSysDicts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllSysDictsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllFiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFiles" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetAllFiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllFilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetFileInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetFileInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetMaxSerialNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxSerialNo" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetMaxSerialNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxSerialNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetSingleFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleFile" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_GetSingleFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_IsFileNameExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsFileNameExists" />
+  </wsdl:message>
+  <wsdl:message name="IJHAutoUpdateService_IsFileNameExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsFileNameExistsResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IJHAutoUpdateService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UploadDLL">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/UploadDLL" message="tns:IJHAutoUpdateService_UploadDLL_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/UploadDLLResponse" message="tns:IJHAutoUpdateService_UploadDLL_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="StopCurrVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/StopCurrVersion" message="tns:IJHAutoUpdateService_StopCurrVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/StopCurrVersionResponse" message="tns:IJHAutoUpdateService_StopCurrVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="StartVision">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/StartVision" message="tns:IJHAutoUpdateService_StartVision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/StartVisionResponse" message="tns:IJHAutoUpdateService_StartVision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetAllCurrentFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllCurrentFiles" message="tns:IJHAutoUpdateService_GetAllCurrentFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllCurrentFilesResponse" message="tns:IJHAutoUpdateService_GetAllCurrentFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetAllSysDicts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllSysDicts" message="tns:IJHAutoUpdateService_GetAllSysDicts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllSysDictsResponse" message="tns:IJHAutoUpdateService_GetAllSysDicts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetAllFiles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllFiles" message="tns:IJHAutoUpdateService_GetAllFiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetAllFilesResponse" message="tns:IJHAutoUpdateService_GetAllFiles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFileInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetFileInfo" message="tns:IJHAutoUpdateService_GetFileInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetFileInfoResponse" message="tns:IJHAutoUpdateService_GetFileInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetMaxSerialNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetMaxSerialNo" message="tns:IJHAutoUpdateService_GetMaxSerialNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetMaxSerialNoResponse" message="tns:IJHAutoUpdateService_GetMaxSerialNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSingleFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetSingleFile" message="tns:IJHAutoUpdateService_GetSingleFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/GetSingleFileResponse" message="tns:IJHAutoUpdateService_GetSingleFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="IsFileNameExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHAutoUpdateService/IsFileNameExists" message="tns:IJHAutoUpdateService_IsFileNameExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHAutoUpdateService/IsFileNameExistsResponse" message="tns:IJHAutoUpdateService_IsFileNameExists_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IJHAutoUpdateService" type="tns:IJHAutoUpdateService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IJHAutoUpdateService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="UploadDLL">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/UploadDLL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopCurrVersion">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/StopCurrVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartVision">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/StartVision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCurrentFiles">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetAllCurrentFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllSysDicts">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetAllSysDicts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllFiles">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetAllFiles" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileInfo">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetFileInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxSerialNo">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetMaxSerialNo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSingleFile">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/GetSingleFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsFileNameExists">
+      <soap12:operation soapAction="http://tempuri.org/IJHAutoUpdateService/IsFileNameExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JHAutoUpdateService">
+    <wsdl:port name="NetTcpBinding_IJHAutoUpdateService" binding="tns:NetTcpBinding_IJHAutoUpdateService">
+      <soap12:address location="net.tcp://192.168.11.125:8980/JHAutoUpdateService/JHAutoUpdateService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://192.168.11.125:8980/JHAutoUpdateService/JHAutoUpdateService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
