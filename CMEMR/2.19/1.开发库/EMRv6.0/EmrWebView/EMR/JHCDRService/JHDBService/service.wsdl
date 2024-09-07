@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JHDBService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IJHDBService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000">
+          </wsrm:InactivityTimeout>
+          <wsrm:AcknowledgementInterval Milliseconds="200">
+          </wsrm:AcknowledgementInterval>
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJHDBService_GetDataSet_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSet" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetDataSet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataSetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Commands_InputMessage">
+    <wsdl:part name="parameters" element="tns:Commands" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Commands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_CommandGeneric_InputMessage">
+    <wsdl:part name="parameters" element="tns:CommandGeneric" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_CommandGeneric_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CommandGenericResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_SetConnectString_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetConnectString" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_SetConnectString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetConnectStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetDBServiceConnectType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBServiceConnectType" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetDBServiceConnectType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBServiceConnectTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_AddIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddIP" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_AddIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetUserNameAndPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameAndPassword" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetUserNameAndPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserNameAndPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetServerIPAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerIPAddress" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_GetServerIPAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerIPAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_RemoveIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveIP" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_RemoveIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_SetUserNameAndPassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserNameAndPassword" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_SetUserNameAndPassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetUserNameAndPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_ServerNow_InputMessage">
+    <wsdl:part name="parameters" element="tns:ServerNow" />
+  </wsdl:message>
+  <wsdl:message name="IJHDBService_ServerNow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ServerNowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IJHDBService">
+    <wsdl:operation name="GetDataSet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/GetDataSet" message="tns:IJHDBService_GetDataSet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/GetDataSetResponse" message="tns:IJHDBService_GetDataSet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Commands">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/Commands" message="tns:IJHDBService_Commands_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/CommandsResponse" message="tns:IJHDBService_Commands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CommandGeneric">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/CommandGeneric" message="tns:IJHDBService_CommandGeneric_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/CommandGenericResponse" message="tns:IJHDBService_CommandGeneric_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetConnectString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/SetConnectString" message="tns:IJHDBService_SetConnectString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/SetConnectStringResponse" message="tns:IJHDBService_SetConnectString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBServiceConnectType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/GetDBServiceConnectType" message="tns:IJHDBService_GetDBServiceConnectType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/GetDBServiceConnectTypeResponse" message="tns:IJHDBService_GetDBServiceConnectType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/AddIP" message="tns:IJHDBService_AddIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/AddIPResponse" message="tns:IJHDBService_AddIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserNameAndPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/GetUserNameAndPassword" message="tns:IJHDBService_GetUserNameAndPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/GetUserNameAndPasswordResponse" message="tns:IJHDBService_GetUserNameAndPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerIPAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/GetServerIPAddress" message="tns:IJHDBService_GetServerIPAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/GetServerIPAddressResponse" message="tns:IJHDBService_GetServerIPAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/RemoveIP" message="tns:IJHDBService_RemoveIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/RemoveIPResponse" message="tns:IJHDBService_RemoveIP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetUserNameAndPassword">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/SetUserNameAndPassword" message="tns:IJHDBService_SetUserNameAndPassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/SetUserNameAndPasswordResponse" message="tns:IJHDBService_SetUserNameAndPassword_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/Register" message="tns:IJHDBService_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/RegisterResponse" message="tns:IJHDBService_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/Test" message="tns:IJHDBService_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/TestResponse" message="tns:IJHDBService_Test_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ServerNow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHDBService/ServerNow" message="tns:IJHDBService_ServerNow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHDBService/ServerNowResponse" message="tns:IJHDBService_ServerNow_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IJHDBService" type="tns:IJHDBService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IJHDBService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="GetDataSet">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/GetDataSet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Commands">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/Commands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommandGeneric">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/CommandGeneric" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetConnectString">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/SetConnectString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDBServiceConnectType">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/GetDBServiceConnectType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddIP">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/AddIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserNameAndPassword">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/GetUserNameAndPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerIPAddress">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/GetServerIPAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveIP">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/RemoveIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetUserNameAndPassword">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/SetUserNameAndPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/Register" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServerNow">
+      <soap12:operation soapAction="http://tempuri.org/IJHDBService/ServerNow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JHDBService">
+    <wsdl:port name="NetTcpBinding_IJHDBService" binding="tns:NetTcpBinding_IJHDBService">
+      <soap12:address location="net.tcp://10.23.1.125:8100/JHDBService/JHDBService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.23.1.125:8100/JHDBService/JHDBService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

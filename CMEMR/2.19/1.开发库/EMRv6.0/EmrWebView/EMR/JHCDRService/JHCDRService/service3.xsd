@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" />
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patient_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visit_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hospital_no" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPatientInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" minOccurs="0" name="patient_index" nillable="true" type="q1:PAT_MASTER_INDEX" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" minOccurs="0" name="patient_visit" nillable="true" type="q2:PAT_VISIT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileIndexs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="hospital_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="patient_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visit_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="file_visit_type_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileIndexsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFileIndexsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+                </ActualType>
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileContentHtm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="file_unique_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileContentHtmResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" minOccurs="0" name="content_htm" nillable="true" type="q3:JHMR_FILE_CONTENT_HTM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileContentDG">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="patient_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="visit_id" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hospital_no" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dg_code" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="file_visit_type_id" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileContentDGResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" minOccurs="0" name="content_dg" nillable="true" type="q4:JHMR_FILE_CONTENT_DG" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

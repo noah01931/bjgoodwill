@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="JHCDRService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="NetTcpBinding_IJHCDRService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000">
+          </wsrm:InactivityTimeout>
+          <wsrm:AcknowledgementInterval Milliseconds="200">
+          </wsrm:AcknowledgementInterval>
+        </wsrm:RMAssertion>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1">
+        </msb:BinaryEncoding>
+        <wsaw:UsingAddressing>
+        </wsaw:UsingAddressing>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" />
+      <xsd:import />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IJHCDRService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetPatientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfo" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetPatientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPatientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileIndexs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileIndexs" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileIndexs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileIndexsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileContentHtm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileContentHtm" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileContentHtm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileContentHtmResponse" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileContentDG_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileContentDG" />
+  </wsdl:message>
+  <wsdl:message name="IJHCDRService_GetFileContentDG_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileContentDGResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="IJHCDRService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHCDRService/Test" message="tns:IJHCDRService_Test_InputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetPatientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHCDRService/GetPatientInfo" message="tns:IJHCDRService_GetPatientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHCDRService/GetPatientInfoResponse" message="tns:IJHCDRService_GetPatientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFileIndexs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHCDRService/GetFileIndexs" message="tns:IJHCDRService_GetFileIndexs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHCDRService/GetFileIndexsResponse" message="tns:IJHCDRService_GetFileIndexs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFileContentHtm">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHCDRService/GetFileContentHtm" message="tns:IJHCDRService_GetFileContentHtm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHCDRService/GetFileContentHtmResponse" message="tns:IJHCDRService_GetFileContentHtm_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetFileContentDG">
+      <wsdl:input wsaw:Action="http://tempuri.org/IJHCDRService/GetFileContentDG" message="tns:IJHCDRService_GetFileContentDG_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IJHCDRService/GetFileContentDGResponse" message="tns:IJHCDRService_GetFileContentDG_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="NetTcpBinding_IJHCDRService" type="tns:IJHCDRService">
+    <wsp:PolicyReference URI="#NetTcpBinding_IJHCDRService_policy">
+    </wsp:PolicyReference>
+    <soap12:binding transport="http://schemas.microsoft.com/soap/tcp" />
+    <wsdl:operation name="Test">
+      <soap12:operation soapAction="http://tempuri.org/IJHCDRService/Test" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+    </wsdl:operation>
+    <wsdl:operation name="GetPatientInfo">
+      <soap12:operation soapAction="http://tempuri.org/IJHCDRService/GetPatientInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileIndexs">
+      <soap12:operation soapAction="http://tempuri.org/IJHCDRService/GetFileIndexs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileContentHtm">
+      <soap12:operation soapAction="http://tempuri.org/IJHCDRService/GetFileContentHtm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileContentDG">
+      <soap12:operation soapAction="http://tempuri.org/IJHCDRService/GetFileContentDG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="JHCDRService">
+    <wsdl:port name="NetTcpBinding_IJHCDRService" binding="tns:NetTcpBinding_IJHCDRService">
+      <soap12:address location="net.tcp://10.23.1.125:8900/JHCDRService/JHCDRService" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://10.23.1.125:8900/JHCDRService/JHCDRService</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

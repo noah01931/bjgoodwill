@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JHEMR.JHCommonLib.Entity.TableObject" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="PAT_MASTER_INDEX">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JHATable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BIRTH_PLACE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHARGE_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CITIZENSHIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CITIZENSHIP_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CREATE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATE_OF_BIRTH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOME_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOME_ZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOSPITAL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDENTITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INP_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JIGUAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LAST_VISIT_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAILING_ADDRESS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NAME_PHONETIC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NATION_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_ADDR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_ZIP_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OPERATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATIENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE_NUMBER_BUSINESS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PHONE_NUMBER_HOME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PIX_PATIENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RELATIONSHIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SECRET_LEVEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEX" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SEX_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UNIT_IN_CONTRACT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VIP_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZIP_CODE" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PAT_MASTER_INDEX" nillable="true" type="tns:PAT_MASTER_INDEX" />
+  <xs:complexType name="JHATable">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="JHATable" nillable="true" type="tns:JHATable" />
+  <xs:complexType name="PAT_VISIT">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JHATable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ADL_ADMISSION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADL_DISCHARGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADMISSION_CAUSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADMISSION_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADMITTED_BY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADVANCED_STUDIES_DOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADVANCED_STUDIES_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ADVERSE_REACTION_DRUGS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AGE_DISCHARGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ALERGY_DRUGS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ARMED_SERVICES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ATTENDING_DOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ATTENDING_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AUTOPSY_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AUTOPSY_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BABY_FLAG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BED_ADMISSION_TO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BED_DISCHARGE_FROM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BED_LABEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BED_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TRAN_REACT_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TRAN_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TRAN_VOL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TYPE_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TYPE_RH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BLOOD_TYPE_RH_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BODY_HEIGHT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="BODY_WEIGHT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CATALOGER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CATALOG_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CCU_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHARGEDOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHARGEDOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHARGE_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHIEF_DOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CHIEF_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLINIC_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLINIC_REGISTRY_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLINIC_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CLINIC_VISIT_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONSULTING_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CONSULTING_DOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP_EXCLUDE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP_EXCLUDE_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP_MEMO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CP_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CRITICAL_COND_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DATE_OF_CONTROL_QUALITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEATH_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DECUBITAL_ULCER_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEPT_ADMISSION_TO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DEPT_DISCHARGE_FROM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DIAGNOSIS_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DIRECTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DIRECTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DISCHARGE_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DISCHARGE_DISPOSITION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DISCHARGE_PASS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOCTOR_IN_CHARGE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOCTOR_IN_CHARGE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DOCTOR_OF_CONTROL_QUALITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DUTY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EMER_TREAT_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ESC_EMER_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FAR_CONSULT_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIRST_AID_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIRST_CASE_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIRST_CASE_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FIRST_LEVEL_NURS_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOLLOW_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOLLOW_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOLLOW_INTERVAL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOLLOW_INTERVAL_UNITS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FOLLOW_OVER_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GH_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GH_DEPT_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="GH_OPERATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HBSAG_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HBSAG_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HCV_AB_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HCV_AB_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HEALTHCARD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HEALTH_LEVEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HIV_AB_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HIV_AB_INDICATOR_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOME_TEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOSPITAL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ICU_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDENTITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IDENTITY_CLASS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INFECT_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INFUSION_REACT_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INPATIENT_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INP_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INP_NO_ALIAS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INSURANCE_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INSURANCE_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="INTERNAL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IN_CONSULT_TIMES" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IN_CP_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IN_CP_USER_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IN_SOURCE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISINFECTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ISOPERATIONROOM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIABILITY_NURSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LIABILITY_NURSE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MAILING_ADDRESS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MARITAL_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MARITAL_STATUS_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MEDICAL_PAY_WAY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MODIFY_DOC_CHANGE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MODIFY_DOC_CHANGE_FLAG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MRQC_DOCT_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MRQC_DOCT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_BACK_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_BACK_MAN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_DOCTOR_PART_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_DOCTOR_SCORE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_INFECT_REPORT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_NURSE_PART_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_NURSE_SCORE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_QUALITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_QUALITY_CV_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_SCORE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MTD_VALUE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_ADDR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_PHONE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NEXT_OF_KIN_ZIPCODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NOMEN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSE_GROUP_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSE_OF_CONTROL_QUALITY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSE_OF_CONTROL_QUALITY_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSE_REMARK" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NURSING_CLASS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OCCUPATION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OUT_CP_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_OFFSET_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVE_NURSE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVE_NURSE_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVE_OPERATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RECEIVE_OPER_DATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAPER_MR_RETURNER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PARENT_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATIENT_CLASS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATIENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PAT_ADM_CONDITION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PIX_PATIENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PIX_VISIT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRACTICE_DOCTOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRACTICE_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRACTICE_DOCTOR_OF_GRADUATE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PRACTICE_DOCTOR_OF_GRADUATE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="QUERY_FLAG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RELATIONSHIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="REQUEST_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ROOM_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RUYUAN_PASS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SECOND_LEVEL_NURS_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERIOUS_COND_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICE_AGENCY" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SERVICE_SYSTEM_INDICATOR" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SPEC_LEVEL_NURS_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SUPER_DOCTOR_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="THIRD_LEVEL_NURS_DAYS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="THREE_DAY_DIAGNOSIS_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="THREE_DAY_DIAGNOSIS_NAME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="THREE_DAY_DIAGNOSIS_REASON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOP_UNIT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOTAL_COSTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TOTAL_PAYMENTS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TUMOR_STAGE_M" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TUMOR_STAGE_N" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TUMOR_STAGE_OTHER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TUMOR_STAGE_T" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UNIT_IN_CONTRACT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VISIT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WARD_ADMISSION_TO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WARD_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WARD_DISCHARGE_FROM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WORKING_STATUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WORKING_STSTUS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WORK_TEL" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WORK_ZIP" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="X_EXAM_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="YWGM" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZIP_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZRYJH" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZYJG" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZYMC" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZYMC_SQ" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZYMD" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PAT_VISIT" nillable="true" type="tns:PAT_VISIT" />
+  <xs:complexType name="JHMR_FILE_CONTENT_HTM">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JHATable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FILE_UNIQUE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MR_CONTENT" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JHMR_FILE_CONTENT_HTM" nillable="true" type="tns:JHMR_FILE_CONTENT_HTM" />
+  <xs:complexType name="JHMR_FILE_CONTENT_DG">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JHATable">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CONTENT_DATE_TIME" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DG_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DG_PLAIN_CONTENT" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DG_PLAIN_CONTENT_BLOB" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FILE_UNIQUE_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FILE_VISIT_TYPE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="HOSPITAL_NO" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATIENT_CUR_DEPT_CODE" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PATIENT_ID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="VISIT_ID" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JHMR_FILE_CONTENT_DG" nillable="true" type="tns:JHMR_FILE_CONTENT_DG" />
+</xs:schema>

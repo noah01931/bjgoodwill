@@ -1,0 +1,131 @@
+/**************************全局样式***************************************/
+body{
+	margin: 0;
+	padding: 0;
+	font: 12px "宋体";
+	background: #d4d4d4;
+}
+a{
+	text-decoration: none;
+}
+/**************************头部样式***************************************/
+.head{
+	width: 100%;
+	height: 113px;
+	background: url(../images/bg_head.png) repeat-x;
+	overflow: hidden;
+	zoom: 1;
+}
+.jh-logo{
+	width: 121px;
+	height: 97px;
+	background: url(../images/jh_logo.png) no-repeat;
+	float: left;
+	_display: inline;
+	margin: 1px 20px 0 20px;
+}
+
+.patient-info{
+	width: 880px;
+	overflow: hidden;
+	zoom: 1;
+	float: left;
+	_display: inline;
+}
+.patient-info .short-item{
+	width: 200px;
+}
+.info-item{
+	width: 225px;
+	height: 35px;
+	line-height: 35px;
+	float: left;
+	_display: inline;
+	font-weight: bold;
+}
+.info-label{
+	display: inline-block;
+	width: 70px;
+	letter-spacing: 1px;
+}
+.info-textbox{
+	width: 110px;
+	height: 20px;
+	background: #f5f5f5;
+	font-weight: bold;
+	border: 1px solid #c8c8c8;
+}
+.info-item .long{
+	width: 140px;
+}
+/**********************主页面*********************************************/
+.page-content{
+	overflow: hidden;
+	width: 100%;
+	zoom: 1;
+}
+.right-content, .main-menu{
+	background: #e8e8e8;
+	float: left;
+	_display: inline;
+}
+/**********************左侧菜单**************************************************/
+.main-menu{
+	width: 200px;
+	margin: 4px auto 10px 8px;
+	padding: 8px 0 0 0;
+}
+.menu-head{
+	width: 196px;
+	height: 28px;
+	font-weight: bold;
+	text-indent: 20px;
+	line-height: 28px;
+	margin: 2px;
+	background: url(../images/bg_menu.png) no-repeat;
+}
+.menu-title{
+	_float: left;
+	_display: block;
+	width: 100px;
+}
+.menu-switch{
+	display: block;
+	width: 10px;
+	height: 7px;
+	float: right;
+	margin: 8px 10px auto auto;
+	background: url(../images/icon_close.png) no-repeat;
+}
+.subItems{
+	display:block;
+}
+a.subItem:link, a.subItem:visited, a.subItem:active{
+	display: block;
+	height: 25px;
+	line-height: 25px;
+	width: 190px;
+	padding-right: 10px;
+	_width: 200px;
+	_padding-right: 0;
+	overflow: hidden;
+	text-indent: 30px;
+	color: #494949;
+}
+a.subItem:hover{
+	background: #1aa8cf;
+	color: #000000;
+}
+/******************************页面右侧内容******************************************/
+.right-content{
+	margin: 4px 8px 10px 6px;
+}
+.index-page{
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	text-align: center;
+}
+.discase-logo{
+	margin: 20% auto 20% auto;
+}
